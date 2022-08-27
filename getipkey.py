@@ -38,6 +38,7 @@ if text_a == "1":
         b = bs4.BeautifulSoup(s.text, "html.parser")
         a = b.select(" .ipblockgradient .ip")[0].getText()
         print(a)
+        quit()
     print("-" * 50)
     print("\t[1] --- Сканировать порты")
     print("\t[2] --- Узнать IP")
