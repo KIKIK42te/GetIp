@@ -84,4 +84,3 @@ if text_a == "3":
         for i in range(length):
             password += random.choice(chars)
         print(password)
-    quit()
