@@ -70,7 +70,6 @@ if text_a == "2":
         except subprocess.CalledProcessError:
             print ("{:<30}|  {:<}".format(i, "ENCODING ERROR"))
     input("")
-    quit()
 
 if text_a == "3":
     import random
