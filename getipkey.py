@@ -10,8 +10,8 @@ print('☆┌─┐　─┐☆\n│▒│ /▒/\n│▒│/▒/\n│▒ /▒/�
 
 print('-' * 50 ,)
 print('\t[1] -- Скан портов')
-print('\t[2] -- WI-FI стиллер ')
-print('\t[3] -- Генератор паролей')
+print('\t[2] -- WI-FI стиллер',)
+print('\t[3] -- Генератор паролей',)
 print('-' * 50 ,"\n")
 
 text_a = input("Ввод -- ")
@@ -38,7 +38,6 @@ if text_a == "1":
         b = bs4.BeautifulSoup(s.text, "html.parser")
         a = b.select(" .ipblockgradient .ip")[0].getText()
         print(a)
-        quit()
     print("-" * 50)
     print("\t[1] --- Сканировать порты")
     print("\t[2] --- Узнать IP")
@@ -49,8 +48,6 @@ if text_a == "1":
         ip()
     if text_a == "1":
         scan()
-    def ip():
-        print(socket.gethostbyname(socket.gethostname()))
     print()
     print("-" * 50)
     print()
