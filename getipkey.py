@@ -10,7 +10,7 @@ print('☆┌─┐　─┐☆\n│▒│ /▒/\n│▒│/▒/\n│▒ /▒/�
 
 print('-' * 50 ,)
 print('\t[1] -- Скан портов')
-print('\t[2] -- WI-FI стиллер',)
+print('\t[2] -- WI-FI стиллер (только для пк)',)
 print('\t[3] -- Генератор паролей',)
 print('-' * 50 ,"\n")
 
@@ -55,6 +55,7 @@ if text_a == "1":
     print()
     time.sleep(1)
     input("Для выхода нажмите ENTER: ")
+    quit()
 
 if text_a == "2":
     import subprocess
@@ -72,6 +73,7 @@ if text_a == "2":
         except subprocess.CalledProcessError:
             print ("{:<30}|  {:<}".format(i, "ENCODING ERROR"))
     input("")
+    quit()
 
 if text_a == "3":
     import random
@@ -85,3 +87,4 @@ if text_a == "3":
         for i in range(length):
             password += random.choice(chars)
         print(password)
+    quit()
