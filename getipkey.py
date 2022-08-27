@@ -53,7 +53,6 @@ if text_a == "1":
     print()
     time.sleep(1)
     input("Для выхода нажмите ENTER: ")
-    quit()
 
 if text_a == "2":
     import subprocess
