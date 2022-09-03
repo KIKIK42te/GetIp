@@ -102,3 +102,27 @@ if text_a == "4":
 
     if search:
         print('Successful !\nYou MAC --', s)
+ if text_a == "5":
+    import scapy.all as scapy
+
+    s = input('Введте IP диапазон которй надо просканировать: ')
+
+    def scan(ip):
+        arp_request = scapy.ARP(pdst = ip)
+        broadcast = scapy.Ether(dst = "ff:ff:ff:ff:ff:ff")
+        arp_request_broadcast = broadcast/arp_request
+        answer_list, unanswer_list = scapy.srp(arp_request_broadcast, timeout = 1)
+
+        print('\t[1] -- answer')
+        print('\t[2] -- unanswer')
+        text_a = input("Ввод -- ")
+        if text_a == '1':
+            print("IP\t\t\tMAC address\n -----------------------------------")
+            for element in answer_list:
+                print(element[1].psrc + "\t\t" + element[1].hwsrc)
+        if text_a == '2':
+            print("IP\t\t\tMAC address\n ---------------------------------")
+            for element in unanswer_list:
+                print(element[1].psrc + "\t\t" + element[1].hwsrc)
+
+    scan(s)
